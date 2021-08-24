@@ -14,3 +14,10 @@ hello "Kadir"
 hello "Martin"
 
 # Help: https://linuxize.com/post/bash-functions/
+
+
+echo "Mit Variable:"
+for item in "Alex" "Markus" "Moni" "Martin"
+  do 
+     hello $item
+done
