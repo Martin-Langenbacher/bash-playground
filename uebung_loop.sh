@@ -25,13 +25,15 @@ done
 echo 'Loop over array elements:'
 BOOKS=('In Search of Lost Time' 'Don Quixote' 'Ulysses' 'The Great Gatsby' 'Hi Markus!')
 
-for book in "${BOOKS[@]}"; do
+for book in "${BOOKS[@]}";
+do
   echo "Book: $book"
 done
 
 # Übung: The C-style Bash for loop
 echo 'The C-style Bash for loop:'
-for ((i = 0 ; i <= 10 ; i++)); do
+for ((i = 0 ; i <= 10 ; i++)); 
+do
   echo "Counter: $i"
 done
 
@@ -61,20 +63,22 @@ done
 
 # Übung: Renaming files with spaces in the filename
 echo 'Renaming files with spaces in the filename:'
-for file in *-*; do
-  mv "$file" "${file//-/_}"
+for file in *\ *; 
+do
+  mv "$file" "${file// /_}"
 done
-# ersetzt Unterstrich: //_/-
-# ersetzt Leerzeichen: // /_
-
 # finde Dateien: mit Leerzeichen --> *\ *
 # finde Dateien: mit Unterstich  --> *_*
+
+# ersetzt Unterstrich: //_/-
+# ersetzt Leerzeichen: // /_
 
 
 
 # Übung: Changing file extension
 echo 'Changing file extension:'
-for file in *.jpeg; do
+for file in *.jpeg;
+do
     mv -- "$file" "${file%.jpeg}.jpg"
 done
 
