@@ -16,7 +16,7 @@ done
 
 # Übung: {START..END..INCREMENT}
 echo 'START..END..INCREMENT:'
-for ml in {0..20..5}
+for ml in {0..20}
 do
   echo "Number: $ml"
 done

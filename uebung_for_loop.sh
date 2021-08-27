@@ -2,7 +2,7 @@
 
 # Function
 hello_world () {
-   echo 'hello, world'
+   echo "$1: hello, world"
 }
 
 
@@ -10,5 +10,12 @@ hello_world () {
 echo 'The C-style Bash for loop: 3x "Hello World"'
 for ((i = 0 ; i <= 2 ; i++)); 
 do
-  hello_world
+  m=$(($i+1))
+  # "$(( ))" --> arithmetische Expansion
+  echo -n $m: # -n --> Zeilenumbruch wird unterbunden!
+  hello_world $m
+
+  # gleich wie oben, aber in einer Zeile:
+  # echo -n $m: ; hello_world $m
+
 done
