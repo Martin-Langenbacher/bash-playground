@@ -13,12 +13,16 @@ echo ""
 
 
 # Übung: The C-style Bash for loop
-echo 'The C-style Bash for loop: 3x "Hello World"'
 for ((i = 99 ; i > 1 ; i--)); 
 do
   echo "$i bottles of beer on the wall, $i bottles of beer."
   m=$(($i-1))
-  echo "Take one down and pass it around, $m bottles of beer on the wall."
+  if [[ $i -ne 2 ]]
+  then
+    echo "Take one down and pass it around, $m bottles of beer on the wall."
+  else
+    echo "Take one down and pass it around, $m bottle of beer on the wall."
+  fi
   echo ""
 done
 
@@ -27,18 +31,6 @@ echo "Take one down and pass it around, no more bottles of beer on the wall."
 echo ""
 echo "No more bottles of beer on the wall, no more bottles of beer."
 echo "Go to the store and buy some more, 99 bottles of beer on the wall."
-
-
-
-
-
-
-
-
-
-echo ""
-echo "Ende =================="
-
 
 
 
