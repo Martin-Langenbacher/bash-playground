@@ -15,7 +15,7 @@ hello_world
 echo "Hier kommt die Schleife:"
 # for item in [List]
 # do
-#   asdfasd
+#   [Commands]
 # done
 for item in 1 2 3
 do 
